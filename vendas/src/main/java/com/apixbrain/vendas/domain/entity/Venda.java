@@ -33,6 +33,5 @@ public class Venda {
 	@ManyToOne
 	@JoinColumn(name = "vendedor_id", nullable = false)
 	private Vendedor vendedor; 
-	
 
 }

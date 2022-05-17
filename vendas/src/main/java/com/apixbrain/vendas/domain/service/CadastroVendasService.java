@@ -25,12 +25,9 @@ public class CadastroVendasService {
 	@Autowired
 	private VendedorRepository vendedorRepository;
 	
-
-	
 	@Transactional
 	public Venda salvar(Venda vendas) {
 		return vendasRepository.save(vendas);
-
 	}
 	
 	public List<ListarVendaTotalVendedores> listaPorPeriodo(String dateInicio,  String dateFinal ) throws ParseException{

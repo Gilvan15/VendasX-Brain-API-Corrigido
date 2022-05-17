@@ -21,7 +21,6 @@ import com.apixbrain.vendas.domain.service.CadastroVendedorService;
 @RequestMapping(value = "/vendedor")
 public class VendedorController {
 	
-	
 	@Autowired
 	private VendedorRepository vendedorRepository;
 	
@@ -30,14 +29,12 @@ public class VendedorController {
 	
 	@GetMapping
 	public List<Vendedor> listar(){
-		
 		return vendedorRepository.findAll();
 	}
 	
 	@PostMapping
 	@ResponseStatus(HttpStatus.CREATED)
 	public Vendedor adicionar(@RequestBody Vendedor vendedor ) {
-		
 		return cadastroVendedor.salvar(vendedor);
 	}
 	
@@ -51,11 +48,5 @@ public class VendedorController {
 	public Optional<Vendedor> vendedorPorUnicoNome(@RequestParam("nome") String nome) {
 		return vendedorRepository.findUnicoByNome(nome);
 	}
-	
-	
-	
-	
-	
-	
 	
 }

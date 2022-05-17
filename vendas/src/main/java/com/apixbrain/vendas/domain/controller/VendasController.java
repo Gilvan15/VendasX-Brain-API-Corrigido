@@ -38,7 +38,6 @@ public class VendasController {
 	public List<Venda> listar() {
 		return vendasRepository.findAll();
 	}
-	
 
 	@PostMapping
 	@ResponseStatus(HttpStatus.CREATED)

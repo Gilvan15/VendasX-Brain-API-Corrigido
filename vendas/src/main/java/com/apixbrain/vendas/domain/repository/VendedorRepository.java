@@ -13,11 +13,8 @@ import com.apixbrain.vendas.domain.entity.Vendedor;
 @Repository
 public interface VendedorRepository extends JpaRepository<Vendedor, Long> {
 	
-//	List<Vendedor> findQualquerCoisaByNome(String nome);
-	
 	@Query("from Vendedor where nome like %:nome% and id = :id")
 	List<Vendedor> consultarPorNome(String nome, @Param("id") Long id );
-	
 	
 	Optional<Vendedor> findUnicoByNome(String nome);
 
